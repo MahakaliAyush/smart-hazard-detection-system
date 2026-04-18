@@ -1,0 +1,48 @@
+Programming for Robotics – Project Pitch
+Project Title:
+Smart Hazard Detection System
+Group Members:
+•	Ayush Patel (s5353051) 
+•	Mohammad Rashed Khan (s5404089) 
+•	Lachlan Roche (s542960) 
+Target Specialisation:
+Option A – Embedded Intelligence (Wokwi)
+1. Executive Summary
+The Smart Hazard Detection System is an embedded intelligent system designed to monitor environmental conditions and detect hazardous situations in real time. It is suitable for high-risk environments such as industrial facilities and fire-prone zones where early detection is critical.
+The system integrates multiple sensors and applies sensor fusion with multi-condition decision logic to classify conditions into safe, warning, and emergency states. Based on these conditions, the system responds through visual, auditory, and physical outputs, ensuring a responsive and context-aware monitoring solution.
+2. System Architecture (Sense–Think–Act)
+Sensing (Inputs):
+•	DHT22 Sensor: Measures temperature and humidity 
+•	Ultrasonic Sensor: Detects nearby objects and environmental presence 
+Processing (Thinking):
+•	Finite State Machine (FSM): Controls system behaviour using structured states 
+•	Decision Logic: Uses multi-condition evaluation combining temperature and humidity (sensor fusion) 
+Actuation (Outputs):
+•	Servo Motor: Performs scanning (0°–180°) 
+•	LED Indicator: Green (Safe), Yellow (Warning), Red (Emergency) 
+•	Buzzer: Provides alert signals during hazard conditions 
+3. Behavioural Logic (Finite State Machine)
+The system implements a 5-state FSM to ensure structured and adaptive behaviour:
+State	Trigger Condition	Behaviour
+IDLE	Safe conditions	Green LED, low monitoring
+SURVEY	Periodic timer	Servo scanning, active sensing
+CAUTION	Temp > 45°C OR Humidity < 20%	Yellow LED, intermittent buzzer
+EMERGENCY	Temp > 60°C AND Humidity < 15%	Red LED blinking, continuous buzzer
+FAILSAFE	Sensor error / invalid data	Safe mode, restricted outputs
+This structure ensures multi-condition logic, clear transitions, and stable operation.
+4. Specialisation: Embedded Intelligence
+The system demonstrates embedded intelligence through:
+•	Sensor Fusion: Uses combined temperature and humidity for hazard detection 
+•	Context-Aware Behaviour: Adjusts system response based on severity 
+•	Real-Time Logic: Continuously monitors and reacts without delay-based blocking 
+5. Safety, Robustness & Reliability
+The system includes:
+•	Fail-safe mechanism: Handles sensor errors and invalid readings 
+•	Controlled FSM behaviour: Prevents unpredictable system states 
+•	Emergency alerts: Immediate visual and auditory response 
+6. Advanced Component (10%)
+The system includes adaptive behaviour by:
+•	Adjusting alert intensity based on hazard level 
+•	Increasing monitoring frequency during critical conditions 
+•	Implementing intelligent scanning using servo motion
+
