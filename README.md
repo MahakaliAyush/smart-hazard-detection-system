@@ -1,0 +1,1 @@
+# smart-hazard-detection-system
