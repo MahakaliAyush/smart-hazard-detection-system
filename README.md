@@ -4,7 +4,6 @@
 
 ## Members
 - Ayush Patel
-- Mohammad Khan
 - Lachlan Roche
 
 ## Description
